@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta name="description" content="">
+	<meta charset="UTF-8">
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title >EXPENDITURE</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/img/house.jpeg" type="image/x-icon">
+	
+</head>
+<body>
+   
+   <img src="/img/th (4).png" alt=" my house" width="200px"height="100px">
+   <br><br>
+   <h2>Personal Monthly Budget Expenditure </h2>
+    <table border cellpadding="3" cellspacing="0">
+		<tr>
+			<th>Monthly Expenses </th>
+			<th>January</th>
+			<th>February</th>
+			<th> March</th>
+			<th>April</th>
+			<th>May</th>
+			<th>June</th>
+			<th>July</th>
+			<th>August</th>
+			<th> September</th>
+			<th>October</th>
+			<th>November</th>
+			<th>December</th>
+										
+		</tr>
+		<tr>
+			<td>House bill</td>
+			<td>1050</td>
+			<td>1288</td>
+			<td>1367</td>
+			<td>1200</td>
+			<td>1388</td>
+			<td>1267</td>
+			<td>1200</td>
+			<td>1288</td>
+			<td>1367</td>
+			<td>1230</td>
+			<td>1288</td>
+			<td>1267</td>
+			
+		</tr>
+		<tr>
+			<td>Car insurance</td>
+			<td>200</td>
+			<td>288</td>
+			<td>230</td>
+			<td>200</td>
+			<td>108</td>
+			<td>97</td>
+			<td>200</td>
+			<td>88</td>
+			<td>167</td>
+			<td>200</td>
+			<td>188</td>
+			<td>167</td>
+
+		</tr>
+		<tr>
+			<td>health insurance</td>
+			<td>20</td>
+			<td>78</td>
+			<td>66</td>
+			<td>20</td>
+			<td>78</td>
+			<td>66</td>
+			<td>20</td>
+			<td>78</td>
+			<td>66</td>
+			<td>20</td>
+			<td>78</td>
+			<td>66</td>
+		</tr>
+		<tr>
+			<td>Traveling</td>
+			<td>200</td>
+			<td>78</td>
+			<td>66</td>
+			<td>200</td>
+			<td>788</td>
+			<td>66</td>
+			<td>200</td>
+			<td>78</td>
+			<td>66</td>
+			<td>200</td>
+			<td>78</td>
+			<td>666</td>
+		</tr>
+		<tr>
+			<td>Child car</td>
+			<td>200</td>
+			<td>78</td>
+			<td>67</td>
+			<td>200</td>
+			<td>78</td>
+			<td>66</td>
+			<td>200</td>
+			<td>78</td>
+			<td>67</td>
+			<td>200</td>
+			<td>78</td>
+			<td>66</td>
+		</tr>
+		<tr>
+		<td>Unexpected costs</td>
+		<td>200</td>
+		<td>78</td>
+		<td>66</td>
+		<td>200</td>
+		<td>78</td>
+		<td>66</td>
+		<td>200</td>
+		<td>78</td>
+		<td>66</td>
+		<td>200</td>
+		<td>78</td>
+		<td>66</td>
+	</table>
+
+<html lang="en">
+	
+	<!-- Various meta elements to help define page. -->
+	<head>
+		<title>Assignment Three</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Labbebo">
+		<meta name="title" content="Assignment Three">
+		<meta name="description" content="Main page for Assignment #3">
+	</head>
+	
+	
+	<body>
+		
+		
+		<h2>Array intialization</h2>
+		
+			<p>Intialize an array with a sequence of numbers:</p>
+			
+			<p id="array"></p>
+			
+			<script>
+				var numbers = [11,23,34,45,56,67,78,89,90,55,67,43];
+				
+				document.getElementById("array").innerHTML = numbers.join(", ");
+			</script>
+		
+		
+		<h2>First task </h2>
+
+			<p>Open the window to show the output of the index number “34”.</p>
+			
+			<script>
+				var index = numbers.indexOf(34);
+				
+				function task1Window() {
+					var task1Window = window.open("", "First task", "width=300,height=300");
+					task1Window.document.write("<h2>First task</h2><p>The index of number of 34 is " + index + ".</p>");
+				}
+				
+				function task1Alert() {
+					alert("The index of number 34 is " + index + ".");
+				}
+			</script>
+			
+			<button type="button" onclick="task1Window()">Open the window and display output</button>
+			<button type="button" onclick="task1Alert()">Show alert and display output </button>
+		
+		<!-- Section for task #2, creating a new window/alert to output all numbers larger than a certain value. -->
+		<h2>Second task </h2>
+
+			<p>Open window and display to output.</p>
+			
+			<script>
+				var temp;
+				var highNumbers = [];
+					
+				for (temp = 0; temp < numbers.length; temp++) {
+					if (numbers[temp] > 34) {
+						highNumbers.push(numbers[temp]);
+					}
+				}
+				
+				function task2Window() {
+					var task2Window = window.open("", "Task two Window", "width=300,height=300");
+					task2Window.document.write("<h2>Second task </h2><p>The numbers that are larger than 34 are: " + highNumbers.join(", ") + ".</p>");
+				}
+				
+				function task2Alert() {
+					alert("The numbers that are larger than 34 are: " + highNumbers.join(", ") + ".");
+				}
+			</script>
+			
+			<button type="button" onclick="task2Window()">Open Window and display output)</button>
+			<button type="button" onclick="task2Alert()">Show alert and display output</button>
+	</body>
+</html>
+
+
+
+
+<footer>
+	<ul>
+		<li>House bill</li>
+		<li>Car insurance</li>
+		<li>Health insurance</li>
+		<li>Traveling</li>
+		<li>Child car</li>
+		<li>Unexpected cost</li>
+		<li>&copy copy right</li>
+		
+		
+	</ul>
+</footer>
+
+</body>
+</html>
